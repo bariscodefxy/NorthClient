@@ -39,9 +39,9 @@ if (settings.linkvertise.enabled == true) {
 
         if (!referer.includes('linkvertise.com')) return res.send('<br> Our systems have detected that you are using a Linkvertise bypasser </br>')
 
-        if (((Date.now() - req.session.linkvertise.generated) / 1000) < 50000) {
-            return res.send('<br> Our systems have detected that you are using a Linkvertise bypasser </br>')
-        }
+//        if (((Date.now() - req.session.linkvertise.generated) / 1000) < 50000) {
+//            return res.send('<br> Our systems have detected that you are using a Linkvertise bypasser </br>')
+//        }
 
         let coins = await db.get(`coins-${req.session.userinfo.id}`);
         coins = coins + settings.linkvertise.coins;
