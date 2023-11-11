@@ -48,8 +48,6 @@ if (settings.linkvertise.enabled == true) {
 
         await db.set(`coins-${req.session.userinfo.id}`, coins);
 
-        req.session.linkvertise.destroy();
-
         return res.redirect('/lv?sucess=true')
     })
 }}
