@@ -98,7 +98,7 @@ const server = http.createServer((req, res) => {
       }
     });
   } else {
-    res.statusCode = 200;
+    res.statusCode = 404;
     res.end();
   }
 });
